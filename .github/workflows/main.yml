@@ -41,3 +41,17 @@ jobs:
           docker tag austinliannn/nus-iss-dmss:latest austinliannn/nus-iss-dmss:server
           docker push austinliannn/nus-iss-dmss:server
 
+  deploy:
+    needs: build
+    runs-on: [aws-ec2]
+    steps:
+      - name: Pull Image from docker hub
+        run: docker pull austinliannn/nus-iss-dmss:server
+
+      - name: Delete old container
+        run: docker rm -f server-container
+
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name server-container austinliannn/nus-iss-dmss
+
+
