@@ -52,6 +52,4 @@ jobs:
         run: docker rm -f server-container
 
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name server-container austinliannn/nus-iss-dmss
-
-
+        run: docker run -d -p 8080:8080 --name server-container austinliannn/nus-iss-dmss:server
