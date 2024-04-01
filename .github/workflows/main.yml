@@ -37,5 +37,5 @@ jobs:
         run: docker build -t austinliannn/nus-iss-dmss .
 
       - name: Publish image to docker hub
-        run: docker push austinliannn/nus-iss-dmss:server
+        run: docker push austinliannn/nus-iss-dmss:latest
 
