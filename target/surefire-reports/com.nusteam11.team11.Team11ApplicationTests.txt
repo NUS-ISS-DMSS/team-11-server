@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.nusteam11.team11.Team11ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.747 s -- in com.nusteam11.team11.Team11ApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.083 s -- in com.nusteam11.team11.Team11ApplicationTests
