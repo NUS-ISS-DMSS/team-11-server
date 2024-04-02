@@ -14,8 +14,6 @@ public class UsersServiceImpl implements UsersService {
     @Autowired
     private UsersRepository usersRepository;
 
-    @SuppressWarnings("null")
-
     @Override
     public Users saveUsers(Users user) {
         return usersRepository.save(user);

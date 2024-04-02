@@ -14,8 +14,6 @@ public class SpaceAmenitiesServiceImpl implements SpaceAmenitiesService {
     @Autowired
     private SpaceAmenitiesRepository spaceAmenitiesRepository;
 
-    @SuppressWarnings("null")
-
     @Override
     public SpaceAmenities savSpaceAmenities(SpaceAmenities spaceAmenities) {
         return spaceAmenitiesRepository.save(spaceAmenities);

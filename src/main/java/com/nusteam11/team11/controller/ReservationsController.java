@@ -67,10 +67,20 @@ public class ReservationsController {
     }
 
     @GetMapping("/getAllReservations")
-    public List<Reservations> getAllReservations(Reservations reservations, @RequestParam int userID){
+    public List<Reservations> getAllReservations(Reservations reservations, @RequestParam int userID) {
         List<Reservations> filteredReservations = reservationsService.getAllReservations(reservations, userID).stream()
-            .filter(foundReservation -> foundReservation.getUser().getId() == userID)
-            .collect(Collectors.toList());
-            return filteredReservations;
+                .filter(foundReservation -> foundReservation.getUser().getId() == userID)
+                .collect(Collectors.toList());
+        return filteredReservations;
+    }
+
+    @PostMapping("/deleteListing")
+    public ResponseEntity<String> delete(@RequestBody int listingId) {
+        Reservations deletedReservation = reservationsService.deleteListing(listingId);
+        if (deletedReservation != null) {
+            return ResponseEntity.ok("Reservation deleted successfully");
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }
