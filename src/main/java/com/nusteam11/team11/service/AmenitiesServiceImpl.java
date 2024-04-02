@@ -14,7 +14,6 @@ public class AmenitiesServiceImpl implements AmenitiesService{
     @Autowired
     private AmenitiesRepository amenitiesRepository;
 
-    @SuppressWarnings("null")
     @Override
     public Amenities saveAmenities(Amenities amenity) {
         return amenitiesRepository.save(amenity);

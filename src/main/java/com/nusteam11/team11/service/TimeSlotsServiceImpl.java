@@ -14,8 +14,6 @@ public class TimeSlotsServiceImpl implements TimeSlotsService {
     @Autowired
     private TimeSlotsRepository timeSlotsRepository;
 
-    @SuppressWarnings("null")
-
     @Override
     public TimeSlots saveTimeSlots(TimeSlots timeSlot) {
         return timeSlotsRepository.save(timeSlot);

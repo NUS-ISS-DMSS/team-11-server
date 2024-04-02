@@ -11,7 +11,6 @@ public class SpacesServiceImpl implements SpacesService{
     @Autowired
     private SpacesRepository spacesRepository;
 
-    @SuppressWarnings("null")
     @Override
     public Spaces saveSpaces(Spaces space) {
         return spacesRepository.save(space);
