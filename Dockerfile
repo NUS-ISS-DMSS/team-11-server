@@ -1,11 +1,11 @@
 FROM eclipse-temurin:17-jdk-alpine
 
-# Update package lists and install make
-RUN apt-get update && \
-    apt-get install -y \
-        curl=7.68.0-1ubuntu2.8 \
-        && \
-    rm -rf /var/lib/apt/lists/*
+# Install required packages
+RUN apk update && \
+    apk add --no-cache \
+        make \
+        # Add other testing dependencies here \
+    && rm -rf /var/cache/apk/*
 
 WORKDIR /app
 COPY target/server-0.0.1.jar server-0.0.1.jar
