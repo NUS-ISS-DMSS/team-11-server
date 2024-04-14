@@ -41,6 +41,10 @@ jobs:
       - name: Build docker image
         run: docker build -t austinliannn/nus-iss-dmss .
 
+      # Unit tests
+      - name: Unit tests
+        run: docker run --rm austinliannn/nus-iss-dmss make test
+
       - name: Publish image to Docker Hub
         run: |
           docker tag austinliannn/nus-iss-dmss:latest austinliannn/nus-iss-dmss:server
