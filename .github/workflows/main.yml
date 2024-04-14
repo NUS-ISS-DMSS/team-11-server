@@ -41,7 +41,7 @@ jobs:
           docker tag austinliannn/nus-iss-dmss:latest austinliannn/nus-iss-dmss:server
           docker push austinliannn/nus-iss-dmss:server
           
-  deploy:
+  Deploy_to_EC2:
     needs: build
     runs-on: [ aws-ec2 ]
     steps:
